@@ -1,0 +1,353 @@
+@import "compass/css3";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+html, body {
+  font-family: 'Outfit', sans-serif !important;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  font: 15px/1 'Open Sans', sans-serif;
+  color: #777;
+  display: block;
+  margin: 0px;
+}
+
+a {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+nav ul span {
+  display: block;
+  padding: 15px;
+  color: rgba(255,255,255,.5);
+  text-transform: uppercase;
+  border-bottom: 1px solid $color-d;
+}
+
+nav ul a {
+  position: relative;
+  display: block;
+  padding: 15px 15px 17px 50px;
+  color: black;
+  border-bottom: 1px solid $color-d;
+}
+
+nav ul a:hover,
+nav ul a.active {
+  background: $color-l;
+}
+
+nav ul a:before {
+  font: normal 16px fontawesome;
+  top: 15px;
+  left: 18px;
+}
+
+nav ul li:nth-child(2) a:before { content: '\f00a'; }
+nav ul li:nth-child(3) a:before { content: '\f012'; }
+nav ul li:nth-child(4) a:before { content: '\f018'; }
+nav ul li:nth-child(5) a:before { content: '\f024'; }
+nav ul li:nth-child(6) a:before { content: '\f0c3'; }
+nav ul li:nth-child(7) a:before { content: '\f09b'; }
+nav ul li:nth-child(8) a:before { content: '\f0fa'; }
+nav ul li:nth-child(10) a:before { content: '\f002'; }
+nav ul li:nth-child(11) a:before { content: '\f085'; }
+nav ul li:nth-child(12) a:before { content: '\f08b'; }
+
+main {
+  flex: 1;
+  padding: 25px;
+  background: #ffffff;
+}
+
+main h1 {
+  height: 80px;
+  margin: -25px -25px 25px -25px;
+  padding: 0 25px;
+  line-height: 76px;
+  font-size: 24px;
+  font-weight: 400;
+  background: ##ffffff;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: hsl(214deg 33% 96%);
+    border-radius: 40px 0 0 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin:0px;
+    padding:0px;
+}
+
+.flex-container > div.left {
+  background-color: red;
+    padding: 0px; 
+    width: 30%;
+    height: auto;
+  }
+
+p {
+    color: #000000;
+    display: block;
+    font-size: 11px;
+    font-weight: 100;
+    padding: 1px 0px 0px 15px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+p.day {
+  color: #2d2d2d;
+}
+
+
+h3 {
+    color: #2d2d2d;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 0px 5px 15px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+     }
+
+.plan  {
+    display: inline-block;
+    background-color: hsl(214deg 48% 97%);
+    width: 76%;
+    height: 90%;
+    border-radius: 9px;
+    margin: 8px 8px;
+}
+
+.flex-grid > div:last-child {
+  margin-right: 0;
+}
+
+.flex-grid h2 {
+  margin: -15px -15px 15px -15px;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+}
+
+.flex-grid li {
+  position: relative;
+  margin: 0 0 10px;
+  padding: 0 0 0 25px;
+}
+
+.flex-grid li:before {
+  content: '\f00c';
+  font: normal 16px fontawesome;
+  top: 0;
+  left: 0;
+  color: #999;
+}
+
+/*
+** Media Queries
+***********************************************************/
+
+@media (max-width: 1000px) { 
+
+  .flex-grid {
+    flex-direction: column;
+  }
+
+  .flex-grid > div {
+    margin-right: 0;
+  }
+
+}
+
+
+.logo {
+      width: 70%;
+    margin: 50px 15px 0px 15px;
+}
+
+
+/* PIE CHART */
+
+#my-pie-chart-container {
+  display: block;
+  align-items: center;
+}
+
+#my-pie-chart {
+    background: conic-gradient( hsl(213deg 47% 22%) 41.20% 40.47%, hsl(69deg 100% 41%) 21.47%);
+    border-radius: 90%;
+    width: 110px;
+    height: 110px;
+    margin: 7px 26px;
+  }
+
+#legenda {
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.entry {
+  display: inline-flex;
+  align-items: center;
+  margin: 5px 0px 5px 7px;
+}
+
+.entry-color {
+    height: 7px;
+    width: 7px;
+    border-radius: 1px;
+}
+
+.entry-text {
+  font-size: 11px;
+    margin-left: 4px;
+}
+
+#color-green {
+  background-color: hsl(69deg 100% 41%);
+}
+
+#color-blue {
+  background-color: hsl(213deg 47% 22%);
+}
+
+
+/* ------------------------------- */
+
+.bc-head-txt-label {
+    font-size: 13px;
+    margin: 56px 10px;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    -webkit-transform: rotate(180deg);
+    transform: rotate( 180deg);
+    white-space: nowrap;
+    position: absolute;
+    display: inline-block;
+    width: 10%;-webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    -webkit-transform: rotate(180deg);
+    transform: rotate( 180deg);
+    white-space: nowrap;
+    position: absolute;
+    display: inline-block;
+    width: 10%;}
+
+.titleup {
+    font-size: 14px;
+    color: #1e3552;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+a:link {
+  text-decoration: none;
+  color: 
+}
+a:visited {
+  text-decoration: none;
+  color: hsl(213deg 5% 60%);
+}
+
+a:hover {
+  text-decoration: none;
+  color: hsl(213deg 47% 22%);
+}
+
+a:active {
+  text-decoration: none;
+  color: hsl(213deg 5% 60%);
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0px 42px 0px 40px;
+    display: inline-block;
+}
+.userinfo {
+     display: inline-block;
+    font-size: 13px;
+    font-weight: 200;
+    line-height: 18px;
+    text-align: center;
+    margin: 6px 0px 0px 20px;
+}
+
+
+h1{
+      display: block;
+    margin: -5px 0px;
+    padding: 0px 0px 0px 25px;
+    font-size: 135px;
+    font-weight: 400;
+    color: #00a396;
+}
+
+.icons {
+    width: 30px;
+    height: auto;
+    display: inline-block;
+    margin: 0px 5px 0px 17px;
+    padding: 75px 0px 0px 1px; 
+  }
+
+  .notification {
+
+  color: white;
+    padding: 0px 0px;
+    position: relative;
+    display: inline-block;
+    margin: -2px -16px 0px -4px;
+    opacity: 78%;
+}
+
+
+.notification .badge {
+  position: relative;
+    top: -22px;
+    font-size: 11px;
+    right: 16px;
+    padding: 1px 5px;
+    background-color: #57bec9;
+    border-radius: 100px;
+    color: white; }
+
+
+.third p.appoint {
+  font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0px;
+    letter-spacing: 1px;
+    color: #f9a976db;
+}
+
+.cont > div#twobox > img {
+  width: 35%%;
+}
+
+img.logo {
+  width: 40%;
+}
